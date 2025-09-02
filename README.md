@@ -102,6 +102,11 @@ Neovim config for Ruby/Rails, JavaScript, Python and Go.
 
 ## Setup for macOS/iTerm2
 
+### Fonts
+Install a Nerd Font for proper icon and symbol display:
+- Download from [Nerd Fonts](https://www.nerdfonts.com/)
+- Set the font in iTerm2 → Preferences → Profiles → Text → Non-ASCII Font
+
 ### Terminal Key Mappings
 
 To enable `<Alt+D>` for commenting lines, configure iTerm2 key mappings:
