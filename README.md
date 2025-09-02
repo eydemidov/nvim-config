@@ -95,7 +95,7 @@ Neovim config for Ruby/Rails, JavaScript, Python and Go.
 - `vaa` / `via` - Select argument/parameter
 
 ### Other
-- `<Alt+D>` - Comment/uncomment lines
+- `<Cmd+/>` - Comment/uncomment lines
 - `<Tab>` - Show completion menu
 - `<Down>` / `<Up>` - Navigate snippets
 - `<Space>xx` - Toggle diagnostics panel
@@ -104,12 +104,10 @@ Neovim config for Ruby/Rails, JavaScript, Python and Go.
 
 ### Terminal Key Mappings
 
-To enable `<Alt+D>` for commenting lines, configure iTerm2 key mappings:
+To enable `<Cmd+/>` for commenting lines, configure iTerm2 key mappings:
 
 1. Open iTerm2 → Preferences → Profiles → Keys → Key Mappings
 2. Add a new key mapping:
    - **Keyboard Shortcut**: `⌘/` (Cmd+Slash)
    - **Action**: Send Escape Sequence
    - **Esc+**: `d`
-
-This maps `Cmd+/` to send `<M-d>` (Alt+D) to comment/uncomment lines in Neovim.
