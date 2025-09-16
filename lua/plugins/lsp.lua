@@ -7,7 +7,7 @@ return {
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "ts_ls", "pyright" },
+      ensure_installed = { "lua_ls", "ts_ls", "pyright", "svelte" },
     })
 
     local lspconfig = require("lspconfig")
@@ -19,6 +19,8 @@ return {
     lspconfig.ruby_lsp.setup({
       cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
     })
+    
+    lspconfig.svelte.setup({})
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition)
     vim.keymap.set("n", "K", vim.lsp.buf.hover)

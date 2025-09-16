@@ -1,5 +1,15 @@
 return {
   "stevearc/conform.nvim",
+  keys = {
+    {
+      "<leader>f",
+      function()
+        require("conform").format({ lsp_fallback = true })
+      end,
+      mode = { "n", "v" },
+      desc = "Format file or range",
+    },
+  },
   opts = {
     log_level = vim.log.levels.DEBUG,
     formatters_by_ft = {
@@ -15,10 +25,8 @@ return {
       html = { "prettier" },
       css = { "prettier" },
       markdown = { "prettier" },
+      svelte = { "prettier" },
     },
-    format_on_save = {
-      timeout_ms = 3000,
-      lsp_fallback = true,
-    },
+    format_on_save = false,
   },
 }
