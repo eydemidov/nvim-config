@@ -5,7 +5,18 @@ return {
   opts = {
     keymap = {
       preset = "none",
-      ["<Tab>"] = { "show", "select_next", "fallback" },
+      ["<Tab>"] = {
+        function(cmp)
+          local line = vim.api.nvim_get_current_line()
+          local col = vim.api.nvim_win_get_cursor(0)[2]
+          local before_cursor = string.sub(line, 1, col)
+          if before_cursor:match("%S$") then
+            return cmp.show()
+          end
+        end,
+        "select_next",
+        "fallback"
+      },
       ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<CR>"] = { "accept", "fallback" },
       ["<Esc>"] = { "hide", "fallback" },
