@@ -20,8 +20,8 @@ return {
       ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<CR>"] = { "accept", "fallback" },
       ["<Esc>"] = { "hide", "fallback" },
-      ["Down"] = { "snippet_forward", "fallback" },
-      ["Up"] = { "snippet_backward", "fallback" },
+      ["<Down>"] = { "snippet_forward", "fallback" },
+      ["<Up>"] = { "snippet_backward", "fallback" },
     },
     completion = {
       menu = { auto_show = false },
