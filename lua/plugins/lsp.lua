@@ -13,7 +13,16 @@ return {
     local lspconfig = require("lspconfig")
 
     lspconfig.lua_ls.setup({})
-    lspconfig.ts_ls.setup({})
+    lspconfig.ts_ls.setup({
+      capabilities = vim.lsp.protocol.make_client_capabilities(),
+      on_attach = function(client, bufnr)
+        client.server_capabilities.workspace = {
+          didChangeWatchedFiles = {
+            dynamicRegistration = true,
+          },
+        }
+      end,
+    })
     lspconfig.pyright.setup({})
     
     lspconfig.ruby_lsp.setup({
