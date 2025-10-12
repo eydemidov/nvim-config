@@ -10,10 +10,8 @@ return {
       ensure_installed = { "lua_ls", "ts_ls", "pyright", "svelte" },
     })
 
-    local lspconfig = require("lspconfig")
-
-    lspconfig.lua_ls.setup({})
-    lspconfig.ts_ls.setup({
+    vim.lsp.config("lua_ls", {})
+    vim.lsp.config("ts_ls", {
       capabilities = vim.lsp.protocol.make_client_capabilities(),
       on_attach = function(client, bufnr)
         client.server_capabilities.workspace = {
@@ -23,13 +21,13 @@ return {
         }
       end,
     })
-    lspconfig.pyright.setup({})
-    
-    lspconfig.ruby_lsp.setup({
+    vim.lsp.config("pyright", {})
+
+    vim.lsp.config("ruby_lsp", {
       cmd = { vim.fn.expand("~/.rbenv/shims/ruby-lsp") },
     })
-    
-    lspconfig.svelte.setup({})
+
+    vim.lsp.config("svelte", {})
 
     vim.keymap.set("n", "gd", vim.lsp.buf.definition)
     vim.keymap.set("n", "K", vim.lsp.buf.hover)
