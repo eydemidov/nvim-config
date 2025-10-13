@@ -29,6 +29,18 @@ return {
 
     vim.lsp.config("svelte", {})
 
+    vim.lsp.config("zls", {
+      cmd = { "zls" },
+      filetypes = { "zig", "zir" },
+      root_markers = { "zls.json", ".git" },
+      settings = {
+        zls = {
+          semantic_tokens = "partial",
+        },
+      },
+    })
+    vim.lsp.enable("zls")
+
     vim.keymap.set("n", "gd", vim.lsp.buf.definition)
     vim.keymap.set("n", "K", vim.lsp.buf.hover)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
