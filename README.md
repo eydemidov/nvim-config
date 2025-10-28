@@ -38,6 +38,12 @@ Neovim config for Ruby/Rails, JavaScript, Python and Go.
 - **neotest** - Test runner framework
 - **neotest-rspec** - RSpec adapter for Ruby/Rails testing
 
+### Debugging
+- **nvim-dap** - Debug Adapter Protocol client
+- **nvim-dap-ui** - Visual debugging interface
+- **nvim-dap-ruby** - Ruby debugger adapter (uses rdbg)
+- **nvim-dap-virtual-text** - Inline variable values during debugging
+
 ### UI & Appearance
 - **github-nvim-theme** - GitHub dark theme
 - **lualine.nvim** - Modern statusline
@@ -88,6 +94,16 @@ Neovim config for Ruby/Rails, JavaScript, Python and Go.
 - `<Space>tt` - Run nearest test
 - `<Space>tf` - Run file tests
 - `<Space>ts` - Toggle test summary
+
+### Debugging
+- `<Space>db` - Toggle breakpoint
+- `<Space>dc` - Continue execution
+- `<Space>di` - Step into
+- `<Space>do` - Step over
+- `<Space>dO` - Step out
+- `<Space>dt` - Terminate debug session
+- `<Space>du` - Toggle debug UI
+- `<Space>dr` - Open debug REPL
 
 ### Text Objects
 - `vaf` / `vif` - Select function (around/inner)

@@ -24,6 +24,13 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 vim.opt.clipboard = "unnamedplus"
+vim.api.nvim_create_autocmd("FileType", {
+  group = vim.api.nvim_create_augroup("formatoptions_no_o", { clear = true }),
+  pattern = "*",
+  callback = function()
+    vim.opt_local.formatoptions:remove("o")
+  end,
+})
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
