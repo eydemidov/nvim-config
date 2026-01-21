@@ -12,6 +12,12 @@ return {
   },
   opts = {
     log_level = vim.log.levels.DEBUG,
+    formatters = {
+      erb_format = {
+        command = "bundle",
+        args = { "exec", "erb-format", "$FILENAME" },
+      }
+    },
     formatters_by_ft = {
       lua = { "stylua" },
       python = { "black" },
