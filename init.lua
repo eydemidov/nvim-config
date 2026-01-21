@@ -33,7 +33,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+-- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 vim.keymap.set("n", "<M-d>", "gcc", { remap = true })
 vim.keymap.set("v", "<M-d>", "gc", { remap = true })
 vim.keymap.set("i", "<M-d>", "<Esc>gcca", { remap = true })
