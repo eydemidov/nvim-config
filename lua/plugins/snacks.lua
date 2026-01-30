@@ -11,6 +11,6 @@ return {
     { "<leader><leader>", function() Snacks.picker.files() end, desc = "Find Files" },
     { "<leader>fg", function() Snacks.picker.grep() end, desc = "Live Grep" },
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
-    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+    -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
   },
 }
